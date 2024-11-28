@@ -1,0 +1,153 @@
+body {  
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    background-color: #F9FAFB;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #2C3E50;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 20px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.main-container > div {
+    margin: 10px;
+}
+
+#board {
+    width: 375px;
+    height: 375px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    border: 5px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.square {
+    width: 110px;
+    height: 110px;
+    border: 1px solid #E0E0E0;
+    background-color: #F7F9FC;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.square:hover {
+    background-color: #D9EFFF;
+    transform: scale(1.1);
+}
+
+.game-rules {
+    max-width: 300px;
+    flex-shrink: 1;
+    padding: 15px;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-rules h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.game-rules ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #555555;
+}
+
+.game-rules p {
+    text-align: center;
+    font-size: 14px;
+    color: #555555;
+    margin-top: 10px;
+}
+
+.cont {
+    width: 250px;
+    flex-shrink: 1;
+    padding: 15px;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.current-turn-message {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+#gameStats p {
+    margin: 5px 0;
+}
+
+#restartButton, #newGameButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    height: auto;
+    width: 180px;
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#restartButton:hover, #newGameButton:hover {
+    background-color: #1ABC9C;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #board {
+        margin: auto;
+    }
+
+    .game-rules, .cont {
+        max-width: 250px;
+        margin: 10px auto;
+    }
+}
